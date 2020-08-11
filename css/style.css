@@ -1,0 +1,275 @@
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --max-width: 1100px
+}
+
+.category {
+  --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff;
+}
+
+/* Utilities*/
+
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 0.4rem 0.6rem;
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.category-sports {background-color: var(--sports-color);}
+.category-ent {background-color: var(--ent-color);}
+.category-tech {background-color: var(--tech-color);}
+
+.card {
+  background: #fff;
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+
+}
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--dark-color);
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-light {background-color: var(--light-color);}
+.btn-primary {background-color: var(--primary-color);}
+.btn-secondary {background-color: var(--secondary-color);}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  background: var(--light-color);
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Staatliches";
+  margin-bottom: 0.55rem;
+  line-height: 1.3;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+
+.main-nav {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.main-nav .container {
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+.main-nav .logo {
+  width: 180px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-self: end;
+}
+
+.main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.main-nav ul li a.current {
+  background: var(--primary-color);
+  color: white;
+}
+.main-nav ul li a:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.main-nav .social {
+  justify-self: center;
+} 
+
+.main-nav .social i {
+  margin-right: 0.5rem;
+  color: #777;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#showcase {
+  color: #fff;
+  background-color: #333;
+  position: relative;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+
+#showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/featured.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase * {
+  z-index: 1;
+}
+
+#showcase p {
+  margin-bottom: 1rem;
+}
+
+#showcase .container .category {
+  margin-left: 0;
+}
+
+
+
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+
+.card h3, .card p {
+  margin-left: 1rem;
+}
+.card img {
+  padding: 1rem;
+}
+
+.articles-container >:first-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1/span 2;
+  grid-gap: 1rem;
+
+} 
+
+.articles-container >:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 2/span 2;
+  grid-gap: 1rem;
+} 
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  padding: 2rem;
+  margin-top: 1.5rem;
+
+}
+.footer-container li a {
+  color: #fff;
+}
+
+.footer-container >:last-child {
+  background: #444;
+  grid-column: 1/span 4;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.footer-container img {
+  width: 50%;
+}
+
+.footer-container input[type='email'] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-container input[type='submit'] {
+  width: 90%;
+}
+
+.list li {
+  padding-bottom: 0.5rem;
+  border-bottom: #555 dotted 1px;
+}
+
+.list li:first-child {
+  padding-top: 0;
+}
+
+.list li a:hover {
+  color: var(--primary-color);
+}
